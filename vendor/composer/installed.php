@@ -634,6 +634,15 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'laravel/nightwatch' => array(
+            'pretty_version' => 'v1.19.0',
+            'version' => '1.19.0.0',
+            'reference' => '5d3e86a84514a470d1827ab5771ae38e46b24773',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laravel/nightwatch',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'laravel/pail' => array(
             'pretty_version' => 'v1.2.3',
             'version' => '1.2.3.0',

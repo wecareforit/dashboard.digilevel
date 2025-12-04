@@ -34,7 +34,7 @@ Route::middleware([
             Route::post('/ploi/webhook/certificateRevoked', [Controllers\PloiWebhookController::class, 'certificateRevoked'])->name('ploi.certificate.revoked');
 
             Route::get('/', function () {
-                return view('welcome');
+                return redirect(config('filament.path', '/admin'));
             })->name('home');
 
             Route::middleware([

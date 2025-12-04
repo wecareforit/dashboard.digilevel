@@ -1,0 +1,88 @@
+
+   ErrorException 
+
+  Undefined variable $data
+
+  at app\Console\Commands\ImportChex.php:117
+    113▕                                 "zin_code"      => $item->code,
+    114▕                             ],
+    115▕                             [
+    116▕                                 "zin_code"           => $item->code,
+  ➜ 117▕                                 "company_id"         => $data->company_id,
+    118▕                                 "comment"            => $item->comment,
+    119▕                                 "type"               => $item->type,
+    120▕                                 "inspection_id"      => $inspection_data_from_db->id,
+    121▕                                 "status"             => $item->status,
+
+  1   app\Console\Commands\ImportChex.php:117
+      Illuminate\Foundation\Bootstrap\HandleExceptions::{closure:Illuminate\Foundation\Bootstrap\HandleExceptions::forwardsTo():255}("Undefined variable $data", "D:\kwimbi.test\app\Console\Commands\ImportChex.php")
+
+  2   vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:36
+      App\Console\Commands\ImportChex::handle()
+
+
+   ErrorException 
+
+  Undefined variable $data
+
+  at app\Console\Commands\ImportChex.php:134
+    130▕                 $logitem = "foutmelding" . $e->getMessage();
+    131▕ 
+    132▕             }
+    133▕ 
+  ➜ 134▕             DB::table('external')->where('id', $data->id)->update([
+    135▕                 'from_date' => date('Y-m-d'),
+    136▕             ]);
+    137▕ 
+    138▕             ExternalApiLog::insert(
+
+  1   app\Console\Commands\ImportChex.php:134
+      Illuminate\Foundation\Bootstrap\HandleExceptions::{closure:Illuminate\Foundation\Bootstrap\HandleExceptions::forwardsTo():255}("Undefined variable $data", "D:\kwimbi.test\app\Console\Commands\ImportChex.php")
+
+  2   vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:36
+      App\Console\Commands\ImportChex::handle()
+
+
+   ErrorException 
+
+  Undefined variable $data
+
+  at app\Console\Commands\ImportChex.php:134
+    130▕                 $logitem = "foutmelding" . $e->getMessage();
+    131▕ 
+    132▕             }
+    133▕ 
+  ➜ 134▕             DB::table('external')->where('id', $data->id)->update([
+    135▕                 'from_date' => date('Y-m-d'),
+    136▕             ]);
+    137▕ 
+    138▕             ExternalApiLog::insert(
+
+  1   app\Console\Commands\ImportChex.php:134
+      Illuminate\Foundation\Bootstrap\HandleExceptions::{closure:Illuminate\Foundation\Bootstrap\HandleExceptions::forwardsTo():255}("Undefined variable $data", "D:\kwimbi.test\app\Console\Commands\ImportChex.php")
+
+  2   vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:36
+      App\Console\Commands\ImportChex::handle()
+
+
+   ErrorException 
+
+  Undefined variable $data
+
+  at app\Console\Commands\ImportChex.php:143
+    139▕                 [
+    140▕                     "model"              => "ObjectInspection",
+    141▕                     "logitem"            => $logitem,
+    142▕                     "model_sub"          => 'Chex',
+  ➜ 143▕                     "company_id"         => $data->company_id,
+    144▕                     "external_id"        => $data->id,
+    145▕                     "status_id"          => '1',
+    146▕                     "schedule_run_token" => $schedule_run_token,
+    147▕                 ]
+
+  1   app\Console\Commands\ImportChex.php:143
+      Illuminate\Foundation\Bootstrap\HandleExceptions::{closure:Illuminate\Foundation\Bootstrap\HandleExceptions::forwardsTo():255}("Undefined variable $data", "D:\kwimbi.test\app\Console\Commands\ImportChex.php")
+
+  2   vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:36
+      App\Console\Commands\ImportChex::handle()
+

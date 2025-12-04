@@ -1,0 +1,5 @@
+integrations:
+  forge:
+    kwimbi.nl:
+      site-id: 2706000
+      server-id: 900507

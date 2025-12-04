@@ -1,0 +1,147 @@
+@ -1, 138+1, 142 @@ .fi-header-heading,
+.fi-wi-stats-overview-stat-icon,
+.fi-section-header-icon,
+.fi-ta-text-item-icon {}
+
+.fi-fo-field-wrp-label {
+  font-weight: normal !important;
+}
+
+
+.fi-sidebar {
+  @apply bg-gray-50 dark:bg-gray-950 !important;
+}
+
+
+
+.fi-topbar {
+  font-weight: normal !important;
+}
+
+.font-semibold {
+  font-weight: normal !important;
+}
+
+.fi-header-heading {
+  font-weight: normal !important;
+}
+
+.fi-input-wrp {
+  background-color: white !important;
+  border-radius: 2px !important;
+}
+
+.table_row_deleted {
+  background-color: rgb(252, 241, 241);
+}
+
+.fi-ac {
+  float: right;
+}
+
+.leading-6 {
+  font-weight: normal !important;
+}
+
+.fi-ta-header {
+  background-color: #F9FAFC;
+  border-top: 1px solid #EFEFEF;
+  font-weight: normal !important;
+  padding: 2px;
+}
+
+.fi-ta-header-heading {
+  font-weight: lighter !important;
+}
+
+.fi-ta-content {
+  padding: 10px;
+}
+
+.fi-topbar-open-sidebar-btn {
+  color: white !important;
+}
+
+.fi-ta-ctn {
+  border: 1px solid #EFEFEF;
+  box-shadow: none !important;
+}
+
+.fi-sidebar-nav {
+  background-color: white !important;
+  ;
+}
+
+.fi-main {
+  background-color: white !important;
+  ;
+}
+
+.fi-dropdown-panel {
+  background-color: white !important;
+  ;
+}
+
+.fi-layout {
+  background-color: white !important;
+  ;
+}
+
+.fi-global-search-result-group {
+  background-color: white !important;
+  ;
+}
+
+
+.fi-global-search-result-group:hover {
+  background-color: white !important;
+}
+
+.fi-global-search-no-results-message {
+  background-color: white !important;
+  ;
+}
+
+.fi-global-search-result-link {
+  background-color: white !important;
+  ;
+}
+
+
+
+
+*/ .fi-section-header {
+  background-color: #F9FAFC !important;
+  ;
+}
+
+
+
+
+.fi-ac-btn-action {
+  padding: 12px !important;
+  border-radius: 5px !important;
+  min-width: 120px !important;
+
+}
+
+.fi-btn-label {
+
+  border-radius: 5px !important;
+
+}
+
+
+
+
+
+.toggleStatus {
+  border-bottom: 10px solid red;
+  position: static;
+  /* collapse WS, preserve LB */
+}
+
+.flush {
+  padding: 0;
+
+}

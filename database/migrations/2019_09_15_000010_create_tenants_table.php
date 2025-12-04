@@ -1,12 +1,12 @@
 <?php
 
-declare (strict_types = 1);
+declare(strict_types=1);
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTenantsTable extends Migration
+return new class extends Migration
 {
     /**
      * Run the migrations.
@@ -17,19 +17,16 @@ class CreateTenantsTable extends Migration
     {
         Schema::create('tenants', function (Blueprint $table) {
             $table->string('id')->primary();
-            $table->string('name')->nullable();
-            $table->string('email')->nullable();
-            $table->string('phone')->nullable();
-            $table->string('database')->nullable();
-            $table->string('logo')->nullable();
-            $table->string('color1')->nullable();
-            $table->string('color2')->nullable();
-            $table->string('subscription_id')->nullable();
-            $table->string('zipcode')->nullable();
-            $table->string('place')->nullable();
-            $table->string('address')->nullable();
-            $table->boolean('is_active')->default(1)->nullable();
+
+            $table->string('email')->unique()->nullable();
+
+            $table->string('stripe_id')->nullable()->index();
+            $table->string('pm_type')->nullable();
+            $table->string('pm_last_four', 4)->nullable();
+            $table->timestamp('trial_ends_at')->nullable();
+
             $table->timestamps();
+            $table->json('data')->nullable();
         });
     }
 
@@ -42,4 +39,4 @@ class CreateTenantsTable extends Migration
     {
         Schema::dropIfExists('tenants');
     }
-}
+};

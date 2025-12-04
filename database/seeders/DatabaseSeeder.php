@@ -1,9 +1,9 @@
 <?php
+
 namespace Database\Seeders;
 
 use App\Models\User;
-
-//use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -13,25 +13,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        $superAdmin = User::create([
-            'name'     => 'Super Admin',
-            'email'    => 'superadmin@ltssoftware.nl',
-            'password' => bcrypt("password"),
+        // User::factory(10)->withPersonalTeam()->create();
 
+        User::factory()->withPersonalTeam()->create([
+            'name' => 'Test User',
+            'email' => 'test@example.com',
         ]);
-
-        $this->call(ShieldSeeder::class);
-        $this->command->call('shield:generate', ['--panel' => 'App', '--all' => 'true']);
-        $this->command->call('shield:super-admin', ['--user' => $superAdmin->id, '--panel' => 'App']);
-        $this->call([
-            // UserSeeder::class,
-            // CompanySeeder::class,
-            // CompanyUserSeeder::class,
-            // ObjectTypeSeeder::class,
-            // WorkActivitieSeeder::class,
-            // ObjectBuildingTypeSeeder::class,
-            // RelationTypeSeeder::class,
-        ]);
-
     }
 }

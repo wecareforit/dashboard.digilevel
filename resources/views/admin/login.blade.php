@@ -8,7 +8,7 @@
             <x-validation-errors class="mb-4" />
 
             <form action="{{ route('admin.login.submit') }}" method="POST">
-                @csrf
+                 @csrf
                 <div>
                     <x-label for="email" value="{{ __('Email') }}" />
                     <x-input class="block mt-1 w-full" value="{{ old('email', '') }}" id="email" name="email" type="email" required />

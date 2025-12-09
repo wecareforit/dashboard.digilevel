@@ -25,7 +25,7 @@ class TenantAdminPanelProvider extends PanelProvider
     {
         return $panel
             ->id('tenant_admin')
-            ->path('admin')
+            ->path('tenant')
                ->databaseTransactions()
            // ->unsavedChangesAlerts()
             ->spa()

@@ -1,0 +1,119 @@
+<nav class="navbar navbar-expand-xl container-fluid p-0">
+  <ul class="navbar-nav align-items-center">
+    <li class="nav-item d-block d-xl-none">
+      <a class="nav-link sidebartoggler ms-n3" id="sidebarCollapse" href="javascript:void(0)">
+        <iconify-icon icon="solar:hamburger-menu-line-duotone" class="fs-7"></iconify-icon>
+      </a>
+    </li>
+    <li class="nav-item d-none d-xl-block">
+      <a href="@@webRoot" class="text-nowrap nav-link">
+        <img src="@@webRoot/assets/images/logos/dark-logo.svg" class="dark-logo" width="180" alt="MaterialM-img" />
+        <img src="@@webRoot/assets/images/logos/light-logo.svg" class="light-logo" width="180" alt="MaterialM-img" />
+      </a>
+    </li>
+    <li class="nav-item nav-icon-hover-bg rounded-circle d-none d-lg-flex dropdown">
+      <div class="hover-dd">
+        <a class="nav-link" id="drop2" href="javascript:void(0)" aria-haspopup="true" aria-expanded="false">
+          <iconify-icon icon="solar:widget-3-line-duotone" class="fs-6"></iconify-icon>
+        </a>
+        <div class="dropdown-menu dropdown-menu-nav  dropdown-menu-animate-up" aria-labelledby="drop2">
+          @@include("./header-components/dd-apps.html")
+        </div>
+      </div>  
+    </li>
+
+  </ul>
+  <div class="d-block d-xl-none">
+    <a href="@@webRoot" class="text-nowrap nav-link">
+      <img src="@@webRoot/assets/images/logos/dark-logo.svg" width="180" alt="MaterialM-img" />
+    </a>
+  </div>
+  <a class="navbar-toggler nav-icon-hover-bg rounded-circle p-0 border-0" href="javascript:void(0)" data-bs-toggle="collapse"
+    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="p-2">
+      <i class="ti ti-dots fs-7"></i>
+    </span>
+  </a>
+  <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+    <div class="d-flex align-items-center justify-content-between px-0 px-xl-8">
+      <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-center">
+        <li class="nav-item nav-icon-hover-bg rounded-circle dropdown d-flex d-lg-none">
+          <a href="javascript:void(0)" class="nav-link"
+            type="button" data-bs-toggle="offcanvas" data-bs-target="#mobilenavbar"
+            aria-controls="offcanvasWithBothOptions">
+            <iconify-icon icon="solar:sort-line-duotone" class="fs-7"></iconify-icon>
+          </a>
+        </li>
+        <li class="nav-item nav-icon-hover-bg rounded-circle d-none d-lg-flex">
+          <a class="nav-link" href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <iconify-icon icon="solar:magnifer-line-duotone" class="fs-6"></iconify-icon>
+          </a>
+        </li>
+        <li class="nav-item nav-icon-hover-bg rounded-circle">
+          <a class="nav-link moon dark-layout" href="javascript:void(0)">
+            <iconify-icon icon="solar:moon-line-duotone" class="moon fs-6"></iconify-icon>
+          </a>
+          <a class="nav-link sun light-layout" href="javascript:void(0)">
+            <iconify-icon icon="solar:sun-2-line-duotone" class="sun fs-6"></iconify-icon>
+          </a>
+        </li>
+        <li class="nav-item nav-icon-hover-bg rounded-circle d-block d-xl-none">
+          <a class="nav-link" href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <iconify-icon icon="solar:magnifer-line-duotone" class="fs-6"></iconify-icon>
+          </a>
+        </li>
+        <!-- ------------------------------- -->
+        <!-- start message Dropdown -->
+        <!-- ------------------------------- -->
+        <li class="nav-item nav-icon-hover-bg rounded-circle dropdown">
+          <a class="nav-link position-relative" href="javascript:void(0)" id="drop2" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <iconify-icon icon="solar:inbox-line-line-duotone" class="fs-6"></iconify-icon>
+            <span class="badge text-bg-primary fs-1 notification">3</span>
+          </a>
+          <div class="dropdown-menu content-dd dropdown-menu-end dropdown-menu-animate-up" aria-labelledby="drop2">
+            @@include("./header-components/dd-inbox.html")
+          </div>
+        </li>
+        <!-- ------------------------------- -->
+        <!-- end message Dropdown -->
+        <!-- ------------------------------- -->
+
+        <!-- ------------------------------- -->
+        <!-- start notification Dropdown -->
+        <!-- ------------------------------- -->
+        <li class="nav-item nav-icon-hover-bg rounded-circle dropdown">
+          <a class="nav-link position-relative" href="javascript:void(0)" id="drop2" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <iconify-icon icon="solar:bell-bing-line-duotone" class="fs-6"></iconify-icon>
+            <div class="notification text-bg-danger rounded-circle fs-1">5</div>
+          </a>
+          <div class="dropdown-menu content-dd dropdown-menu-end dropdown-menu-animate-up" aria-labelledby="drop2">
+            @@include("./header-components/dd-notification.html")
+          </div>
+        </li>
+        <!-- ------------------------------- -->
+        <!-- end notification Dropdown -->
+        <!-- ------------------------------- -->
+
+        <!-- ------------------------------- -->
+        <!-- start profile Dropdown -->
+        <!-- ------------------------------- -->
+        <li class="nav-item dropdown">
+          <a class="nav-link" href="javascript:void(0)" id="drop1" data-bs-toggle="dropdown" aria-expanded="false">
+            <div class="d-flex align-items-center gap-2 lh-base">
+              <img src="@@webRoot/assets/images/profile/user-1.jpg" class="rounded-circle" width="35" height="35"
+                alt="MaterialM-img" />
+            </div>
+          </a>
+          <div class="dropdown-menu content-dd dropdown-menu-end dropdown-menu-animate-up" aria-labelledby="drop1">
+            @@include("./header-components/dd-profile.html")
+          </div>
+        </li>
+        <!-- ------------------------------- -->
+        <!-- end profile Dropdown -->
+        <!-- ------------------------------- -->
+      </ul>
+    </div>
+  </div>
+</nav>

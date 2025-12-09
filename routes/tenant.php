@@ -34,7 +34,7 @@ Route::middleware([
             Route::post('/ploi/webhook/certificateRevoked', [Controllers\PloiWebhookController::class, 'certificateRevoked'])->name('ploi.certificate.revoked');
 
             Route::get('/', function () {
-                return redirect(config('filament.path', '/admin'));
+                return view('auth.login');
             })->name('home');
 
             Route::middleware([
@@ -63,4 +63,13 @@ Route::middleware([
                 });
             });
         });
+
+
+        // Logout route
+Route::post('/logout', function () {
+    Auth::logout();
+    return redirect('/'); // redirect to homepage after logout
+})->name('logout');
+
+
 });
